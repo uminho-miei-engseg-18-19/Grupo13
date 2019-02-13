@@ -38,7 +38,9 @@ Ao analisarmos o método generateSecret() a geração do segredo aleatório é f
 
 2. Poderiamos utilizar diretamente o resultado do método generateRandomData(), ao invés de eliminar do mesmo tudo o que não fosse letras e dígitos, e assim o output não seria limitado.
 
+--------------------------------------------------------------------------------------------------------------
 #### P2.1
+
 A.
 gerar mykey.pem
 
@@ -57,7 +59,10 @@ recoverSecretFromComponents-app.py
 	indicamos quantos componentes queremos introduzir, mas sempre maior ou igual que o quorum e menor ou igual que o número total de shares, para recuperar o segredo;
 recoverSecretFromAllComponents-app.py
 	são necessários todos os componentes para recuperar o segredo
-
+.......
 o Allcomponents deverá ser utilizado quando ...
+.......
 
+#### P3.1
 
+#### P4.1
