@@ -22,6 +22,7 @@ Por outro lado, o `/dev/urandom` caso não tenha a entropia necessária para ger
 
 O tempo necessário para gerar um número aleatório através do /dev/random diminui consideravelmente após a instalação do haveged.
 Isto deve-se ao facto, do algoritmo antes utilizado apenas considerar a entropia gerada por eventos externos, cujas gerações se encontram no intervalo de 10-100 bits por segundo, o que limita a geração de números de tamanho razoáveis. 
+
 Assim sendo, o algoritmo HAVEGE permite ultrapassar estas limitações de baixa entropia, fazendo uso dos mecanismos de hardware existentes para obter entropia, como cache, contador de ciclos de relógio do processador e outros, mantendo na mesma um nível de imprevisibilidade e segurança altos, pois é praticamente impossível monitorizar os mesmos.
   
 #### P1.3
@@ -42,9 +43,8 @@ Ao analisarmos o método *generateSecret()*, a geração do segredo aleatório �
                     
 	Assim sendo o processo vai se repetir até o segredo ter o tamanho desejado e apenas contém letras e dígitos.
 
-3. Poderiamos utilizar diretamente o resultado do método *generateRandomData()*, ao invés de eliminar do mesmo tudo o que não fosse letras e dígitos, e transformando os bytes retornados em carateres imprimíveis passando-os para base 64. Assim, o output não seria limitado.
+2. Poderiamos utilizar diretamente o resultado do método *generateRandomData()*, ao invés de eliminar do mesmo tudo o que não fosse letras e dígitos, e transformando os bytes retornados em carateres imprimíveis passando-os para base 64. Assim, o output não seria limitado.
 
---------------------------------------------------------------------------------------------------------------
 #### P2.1
 
 A.
@@ -69,6 +69,8 @@ Este programa permite indicar quantos componentes queremos introduzir, mas sendo
 Este programa permite recuperar o segredo apenas se todos os componentes, nos quais o segredo foi dividido, forem introduzidos, neste caso corresponde às 8 partes. 
 
 O recoverSecretFromAllComponents-app.py deverá ser utilizado quando o nível de segurança e acesso é elevado, e queremos garantir a participação e conhecimento de todos os envolvidos na partilha inicial do segredo.
+
+--------------------------------------------------------------------------------------------------------------
 
 #### P3.1
 
