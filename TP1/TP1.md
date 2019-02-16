@@ -64,8 +64,11 @@ Finalmente, o resultado do comando anterior são as 8 partes do segredo, que ser
 
 B.
 - recoverSecretFromComponents-app.py
+
 Este programa permite indicar quantos componentes queremos introduzir, mas sendo sempre maior ou igual que o quorum e menor ou igual que o número total de partes, para recuperar o segredo;
+
 - recoverSecretFromAllComponents-app.py
+
 Este programa permite recuperar o segredo apenas se todos os componentes, nos quais o segredo foi dividido, forem introduzidos, neste caso corresponde às 8 partes. 
 
 O recoverSecretFromAllComponents-app.py deverá ser utilizado quando o nível de segurança e acesso é elevado, e queremos garantir a participação e conhecimento de todos os envolvidos na partilha inicial do segredo.
