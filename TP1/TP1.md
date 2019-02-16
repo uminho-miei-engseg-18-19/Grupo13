@@ -87,8 +87,17 @@ De acordo com o [endereço dado](https://webgate.ec.europa.eu/tl-browser/), enco
 Através da execução do comando dado na nota 2 do enunciado ( `openssl x509 -in cert.crt -text -noout`), conseguimos extrair informação sobre os algoritmos e o tamanho das chaves usadas nos mesmos:
 
 |                Entidade               |    Algoritmo de Assinatura   | Algoritmo de Chave Publica | Tamanho da Chave (bits) | Validade |
-|:-------------------------------------|:--------------:|:-----------------------:|:---------------:|:----------:|
+|:--------------------------------------|:----------------------------:|:--------------------------:|:-----------------------:|:--------:|
 |AlfaSign Public CA| sha1 com RSA | RSA | 2048 | Oct  8 13:57:59 2010 GMT until Oct  7 13:57:59 2015 GMT|
 |AlfaSign Qualified CA| sha1 com RSA| RSA | 2048 | Dec  5 18:33:57 2011 GMT until Nov 30 18:33:57 2031 GMT |
 |Alfasign Qualified Root CA| sha256 com RSA | RSA | 2048| Aug 11 08:57:10 2017 GMT until Aug 11 09:07:10 2047 GMT|
 
+
+
+Relativamente à CENTRUL DE CALCUL SA analisamos o certificado CertDigital Validation Authority G2:
+
+	- Algoritmo de Assinatura:	SHA256 com RSA
+	- Algoritmo de Chave Publica: 	RSA
+	- Tamanho da chave: 		2048
+
+Ora, segundo a Classificação [ENISA](https://www.enisa.europa.eu/publications/algorithms-key-size-and-parameters-report-2014) de Novembro de 2014, prevê-se que problemas com RSA serão seguros em 10 a 50 anos de vida desde que a chave apresente mais de 3072 bits, o que não se verifica nos certificados analisados. Recomenda tambem o uso de curvas elipticas de 256 bits quando se trata de primitivas de chaves publicas e preferem o  uso de sha512 no que toca a funçoes de hash quando comparado ao uso de sha256.
