@@ -19,6 +19,7 @@ Por outro lado, o `/dev/urandom` caso não tenha a entropia necessária para ger
 |:-------:|:-----:|
 |head -c 1024 /dev/random \| openssl enc -base64|0.012s|
 |head -c 1024 /dev/urandom \| openssl enc -base64|0.014s|
+
 O tempo necessário para gerar um número aleatório através do /dev/random diminui consideravelmente após a instalação do haveged.
 Isto deve-se ao facto, do algoritmo antes utilizado apenas considerar a entropia gerada por eventos externos, cujas gerações se encontram no intervalo de 10-100 bits por segundo, o que limita a geração de números de tamanho razoáveis. 
 Assim sendo, o algoritmo HAVEGE permite ultrapassar estas limitações de baixa entropia, fazendo uso dos mecanismos de hardware existentes para obter entropia, como cache, contador de ciclos de relógio do processador e outros, mantendo na mesma um nível de imprevisibilidade e segurança altos, pois é praticamente impossível monitorizar os mesmos.
