@@ -74,9 +74,48 @@ Este programa permite recuperar o segredo apenas se todos os componentes, nos qu
 
 O recoverSecretFromAllComponents-app.py deverá ser utilizado quando o nível de segurança e acesso é elevado, e queremos garantir a participação e conhecimento de todos os envolvidos na partilha inicial do segredo.
 
---------------------------------------------------------------------------------------------------------------
-
 #### P3.1
+
+
+??? a etiqueta tem de ser cifrada ou é um campo extra??? se for cifrada perde o proposito, pois como ajuda a saber o q esta no segredo se a etiqueta esta cifrada??
+?? chave muda todos os dias logo vamos ter um local onde temos armazenadas todas as chaves dos vários dias, e sendo assim a partir da data obtemos a chave para a parte de decifrar???
+
+- Cifrar
+
+Para cifrar são precisos  3 parâmetros:
+	segredo_plaintext
+	etiqueta
+	chave_cifra
+
+Inicialmente ciframos o segredo, garantido assim a confidencialidade do mesmo:
+	segredo_cyphertext = cifra(segredo_plaintext)
+
+De seguida, obtemos o *hmac* do resultado anterior, o que permite garantir a integridade e autenticidade, pois este *hmac* só será possível obter com acesso à *chave_cifra* e ao *segredo_plaintext*:
+	hmac = hmac(chave_cifra,segredo_cyphertext)
+
+E o resultado final seria:
+	segredo_cyphertext + hmac + data + etiqueta
+
+- Decifrar
+
+No processo de decifrar recebemos o resultado de cifrar mais a chave, tendo assim os seguintes parâmetros:
+	segredo_cyphertext
+	hmac
+	data
+	etiqueta
+	chave_cifra
+
+Para decifrar começamos por obter o *hmac*:
+	hmac' = hmac(chave_cifra, segredo_cyphertext)
+
+De seguida comparámos o *hmac* obtido com o fornecido por parâmetro, e caso não sejam iguais, é porque o *segredo_cyphertext* sofreu alterações ou a *chave_cifra* não é a correta, e como tal o processo falharia:
+	if(hmac' != hmac)
+		return error
+
+Caso os *hmac* sejam iguais, estamos em condições de obter o *segredo_plaintext*:
+	segredo_plaintext = decifra (segredo_cyphertext, chave_cifra)
+
+E finalmente podemos retornar o *segredo_plaintext*.
 
 #### P4.1
 ##### AlfaTrust Certification S.A.
@@ -100,4 +139,4 @@ Relativamente à CENTRUL DE CALCUL SA analisamos o certificado CertDigital Valid
 	- Algoritmo de Chave Publica: 	RSA
 	- Tamanho da chave: 		2048
 
-Ora, segundo a Classificação [ENISA](https://www.enisa.europa.eu/publications/algorithms-key-size-and-parameters-report-2014) de Novembro de 2014, prevê-se que problemas com RSA serão seguros em 10 a 50 anos de vida desde que a chave apresente mais de 3072 bits, o que não se verifica nos certificados analisados. Recomenda tambem o uso de curvas elipticas de 256 bits quando se trata de primitivas de chaves publicas e preferem o  uso de sha512 no que toca a funçoes de hash quando comparado ao uso de sha256.
+Ora, segundo a Classificação [ENISA](https://www.enisa.europa.eu/publications/algorithms-key-size-and-parameters-report-2014) de Novembro de 2014, prevê-se que problemas com RSA serão seguros em 10 a 50 anos de vida desde que a chave apresente mais de 3072 bits, o que não se verifica nos certificados analisados. Recomenda também o uso de curvas elípticas de 256 bits quando se trata de primitivas de chaves publicas e preferem o uso de sha512 no que toca a funções de hash, quando comparado ao uso de sha256.
