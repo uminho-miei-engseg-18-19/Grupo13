@@ -83,22 +83,27 @@ O recoverSecretFromAllComponents-app.py deverá ser utilizado quando o nível de
 - Cifrar
 
 Para cifrar são precisos  3 parâmetros:
+
 	segredo_plaintext
 	etiqueta
 	chave_cifra
 
 Inicialmente ciframos o segredo, garantido assim a confidencialidade do mesmo:
+
 	segredo_cyphertext = cifra(segredo_plaintext)
 
 De seguida, obtemos o *hmac* do resultado anterior, o que permite garantir a integridade e autenticidade, pois este *hmac* só será possível obter com acesso à *chave_cifra* e ao *segredo_plaintext*:
+
 	hmac = hmac(chave_cifra,segredo_cyphertext)
 
 E o resultado final seria:
+
 	segredo_cyphertext + hmac + data + etiqueta
 
 - Decifrar
 
 No processo de decifrar recebemos o resultado de cifrar mais a chave, tendo assim os seguintes parâmetros:
+
 	segredo_cyphertext
 	hmac
 	data
@@ -106,13 +111,16 @@ No processo de decifrar recebemos o resultado de cifrar mais a chave, tendo assi
 	chave_cifra
 
 Para decifrar começamos por obter o *hmac*:
+
 	hmac' = hmac(chave_cifra, segredo_cyphertext)
 
 De seguida comparámos o *hmac* obtido com o fornecido por parâmetro, e caso não sejam iguais, é porque o *segredo_cyphertext* sofreu alterações ou a *chave_cifra* não é a correta, e como tal o processo falharia:
+
 	if(hmac' != hmac)
 		return error
 
 Caso os *hmac* sejam iguais, estamos em condições de obter o *segredo_plaintext*:
+
 	segredo_plaintext = decifra (segredo_cyphertext, chave_cifra)
 
 E finalmente podemos retornar o *segredo_plaintext*.
