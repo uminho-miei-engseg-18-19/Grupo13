@@ -77,7 +77,6 @@ O recoverSecretFromAllComponents-app.py deverá ser utilizado quando o nível de
 #### P3.1
 
 
-??? a etiqueta tem de ser cifrada ou é um campo extra??? se for cifrada perde o proposito, pois como ajuda a saber o q esta no segredo se a etiqueta esta cifrada??
 ?? chave muda todos os dias logo vamos ter um local onde temos armazenadas todas as chaves dos vários dias, e sendo assim a partir da data obtemos a chave para a parte de decifrar???
 
 - Cifrar
@@ -92,29 +91,31 @@ Inicialmente ciframos o segredo, garantido assim a confidencialidade do mesmo:
 
 	segredo_cyphertext = cifra(segredo_plaintext)
 
-De seguida, obtemos o *hmac* do resultado anterior, o que permite garantir a integridade e autenticidade, pois este *hmac* só será possível obter com acesso à *chave_cifra* e ao *segredo_plaintext*:
+De seguida, obtemos o *hmac* do resultado anterior e etiqueta, o que permite garantir a integridade e autenticidade, pois este *hmac* só será possível obter com acesso à *chave_cifra* e ao *segredo_plaintext*:
 
-	hmac = hmac(chave_cifra,segredo_cyphertext)
+	hmac = hmac(chave_cifra,segredo_cyphertext+etiqueta)
+
+Ao obter o *hmac* da cifra, garantimos que não é possível obter informação nenhuma sobre o *plaintext* através do *hmac*.
 
 E o resultado final seria:
 
-	segredo_cyphertext + hmac + data + etiqueta
+	segredo_cyphertext + etiqueta + hmac + data
 
 - Decifrar
 
 No processo de decifrar recebemos o resultado de cifrar mais a chave, tendo assim os seguintes parâmetros:
 
 	segredo_cyphertext
+	etiqueta
 	hmac
 	data
-	etiqueta
 	chave_cifra
 
 Para decifrar começamos por obter o *hmac*:
 
-	hmac' = hmac(chave_cifra, segredo_cyphertext)
+	hmac' = hmac(chave_cifra, segredo_cyphertext+etiqueta)
 
-De seguida comparámos o *hmac* obtido com o fornecido por parâmetro, e caso não sejam iguais, é porque o *segredo_cyphertext* sofreu alterações ou a *chave_cifra* não é a correta, e como tal o processo falharia:
+De seguida comparámos o *hmac* obtido com o fornecido por parâmetro, e caso não sejam iguais, é porque o *segredo_cyphertext+etiqueta* sofreu alterações ou a *chave_cifra* não é a correta, e como tal o processo falharia:
 
 	if(hmac' != hmac)
 		return error
