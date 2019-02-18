@@ -128,6 +128,7 @@ De acordo com o [endereço dado](https://webgate.ec.europa.eu/tl-browser/), enco
 - AlfaSign Public CA
 - AlfaSign Qualified CA
 - Alfasign Qualified Root CA
+
 Através da execução do comando dado na nota 2 do enunciado ( `openssl x509 -in cert.crt -text -noout`), conseguimos extrair informação sobre os algoritmos e o tamanho das chaves usadas nos mesmos:
 
 |                Entidade               |    Algoritmo de Assinatura   | Algoritmo de Chave Publica | Tamanho da Chave (bits) | Validade |
