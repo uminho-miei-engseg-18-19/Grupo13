@@ -77,52 +77,48 @@ O recoverSecretFromAllComponents-app.py deverá ser utilizado quando o nível de
 #### P3.1
 
 
-?? chave muda todos os dias logo vamos ter um local onde temos armazenadas todas as chaves dos vários dias, e sendo assim a partir da data obtemos a chave para a parte de decifrar???
-
 - Cifrar
 
-Para cifrar são precisos  3 parâmetros:
+Para cifrar são precisos 2 parâmetros:
 
 	segredo_plaintext
 	etiqueta
-	chave_cifra
 
 Inicialmente ciframos o segredo, garantido assim a confidencialidade do mesmo:
 
 	segredo_cyphertext = cifra(segredo_plaintext)
 
-De seguida, obtemos o *hmac* do resultado anterior e etiqueta, o que permite garantir a integridade e autenticidade, pois este *hmac* só será possível obter com acesso à *chave_cifra* e ao *segredo_plaintext*:
+De seguida, obtemos o *hmac* do resultado anterior e etiqueta, o que permite garantir a integridade e autenticidade, pois este *hmac* só será possível obter com acesso à *chave_cifra*, que se encontra apenas no hardware específico identificada pelo "ano.mes.dia" e ao *segredo_plaintext*:
 
-	hmac = hmac(chave_cifra,segredo_cyphertext+etiqueta)
+	hmac = hmac(ano.mes.dia,segredo_cyphertext+etiqueta)
 
-Ao obter o *hmac* da cifra, garantimos que não é possível obter informação nenhuma sobre o *plaintext* através do *hmac*.
+Ao obter o *hmac* da cifra e etiqueta, garantimos que não é possível obter informação nenhuma sobre o *plaintext* através do *hmac*.
 
 E o resultado final seria:
 
-	segredo_cyphertext + etiqueta + hmac + data
+	segredo_cyphertext + etiqueta + hmac + ano.mes.dia
 
 - Decifrar
 
-No processo de decifrar recebemos o resultado de cifrar mais a chave, tendo assim os seguintes parâmetros:
+No processo de decifrar recebemos os seguintes parâmetros:
 
 	segredo_cyphertext
 	etiqueta
 	hmac
-	data
-	chave_cifra
+	ano.mes.dia
 
 Para decifrar começamos por obter o *hmac*:
 
-	hmac' = hmac(chave_cifra, segredo_cyphertext+etiqueta)
+	hmac' = hmac(ano.mes.dia, segredo_cyphertext+etiqueta)
 
-De seguida comparámos o *hmac* obtido com o fornecido por parâmetro, e caso não sejam iguais, é porque o *segredo_cyphertext+etiqueta* sofreu alterações ou a *chave_cifra* não é a correta, e como tal o processo falharia:
+De seguida comparámos o *hmac* obtido com o fornecido por parâmetro, e caso não sejam iguais, é porque o *segredo_cyphertext+etiqueta* sofreu alterações ou o identificador da chave não é o correto, e como tal o processo falharia:
 
 	if(hmac' != hmac)
 		return error
 
 Caso os *hmac* sejam iguais, estamos em condições de obter o *segredo_plaintext*:
 
-	segredo_plaintext = decifra (segredo_cyphertext, chave_cifra)
+	segredo_plaintext = decifra (segredo_cyphertext, ano.mes.dia)
 
 E finalmente podemos retornar o *segredo_plaintext*.
 
