@@ -38,8 +38,8 @@ Como solução, propõem escrever o *HMAC* e calcular o codigo que verifica o *p
 
 #### 1:
 
-(./SSH/ssh1.png)
-(./SSH/ssh2.png)
+![SSH 1](./SSH/ssh1.png)
+![SSH 2](./SSH/ssh2.png)
 
 #### 2:
 
