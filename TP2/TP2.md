@@ -32,3 +32,34 @@ No entanto, a própria análise feita pelo *SSL* apresenta um [link](https://blo
 Em suma, as cifras *CBC* no *TLS* apresentam uma falha: calculam o *HMAC* do texto limpo e só depois cifram `plaintext || HMAC || padding || padding length` com CBC, fazendo com que o recebedor tênha que decifrar a mensagem e comparar o *HMAC* sem nunca dar a conhecer a um atacante o tamanho do *padding*. Se o fizer, um atacante consegue aprender o ultimo byte de cada bloco e, por iteração, a mensagem inteira. Chamamos a isso um **padding oracle**.
 ![Texto a ser cifrado pelo CBC](./diagrama.jpg)
 Como solução, propõem escrever o *HMAC* e calcular o codigo que verifica o *padding* em tempo perfeitamente constante. A ideia é guardar a comparação de cada bit da verificação com 1. Se algum dos resultados dor 0 , o resultado é 0, senão é 1. Assim, um atacante apenas consegue saber se tudo, incluindo o *HMAC* e o *padding*, está bem ou mal.
+
+
+#### P3.1) SSH
+
+#### 1:
+
+(./SSH/ssh1.png)
+(./SSH/ssh2.png)
+
+#### 2:
+
+- 198.55.199.127:
+	- Software: OpenSSH;
+	- Versão: 5.3;
+
+- 206.200.248.27:
+	- Software: WeOnlyDo;
+	- Versão: 2.2.9;
+
+#### 3:
+
+De acordo com o shodan, conseguimos concluir que o WeOnlyDo apresenta 5 vulnerabilidades enquanto o OpenSSH apresenta 11. Logo, concluímos que o OpenSSH apresenta mais vulnerabilidades.
+
+#### 4:
+
+A vulnerabilidade mais grave é a CVE-2010-3972, com um score de 10.0 (high)).
+
+#### 5:
+
+Esta vulnerabilidade é baseada num overflow de um Heap-based buffer. Isto permite aos atacantes executar codigos, arbitrariamente, ou executar ataces de Deniel of Service.
+Esta vulnerabilidade afeta a confidencialidade, integridade e a disponivilidade do servidor. Esta tambem permite a sua modificação não autorizada e disclosure of information.
