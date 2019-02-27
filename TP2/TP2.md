@@ -1,3 +1,9 @@
+### 1.Assinaturas cegas (_Blind signatures_) baseadas no Elliptic Curve Discrete Logarithm Problem (ECDLP)
+
+#### P1.1
+O código desenvolvido para esta pergunta encontra-se na diretoria [P1](https://github.com/uminho-miei-engseg-18-19/Grupo13/tree/master/TP2/P1).
+
+### 2. Protocolo SSL/TLS
 
 #### P2.1 i)Anexe os resultados do _SSL Server test_ à sua resposta
 Como pedido, escolhemos três sites de empresas cotadas no ***NASDAQ***, empresas essas:
@@ -33,6 +39,7 @@ Em suma, as cifras *CBC* no *TLS* apresentam uma falha: calculam o *HMAC* do tex
 ![Texto a ser cifrado pelo CBC](./diagrama.jpg)
 Como solução, propõem escrever o *HMAC* e calcular o codigo que verifica o *padding* em tempo perfeitamente constante. A ideia é guardar a comparação de cada bit da verificação com 1. Se algum dos resultados dor 0 , o resultado é 0, senão é 1. Assim, um atacante apenas consegue saber se tudo, incluindo o *HMAC* e o *padding*, está bem ou mal.
 
+### 3. Protocolo SSH
 
 #### P3.1) SSH
 
