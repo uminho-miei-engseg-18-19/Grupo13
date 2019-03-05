@@ -1,15 +1,16 @@
+### 1. TOR (The Onion Router)
 
-#### P1.1: TOR
+#### P1.1
 
 #### 1)
 
-Não, o comando “sudo anonsurf start” apenas gera um ip aleatorio o que faz com que não seja possivel garantir que estaremos localizado nos EUA.
+Não, o comando “sudo anonsurf start” apenas gera um ip aleatório o que faz com que não seja possivel garantir que estaremos localizados nos EUA.
 
 #### 2) 
 
-Visto que há varias ligações numa conexão TOR, devidos aos varios OR’s, e estão são alteradas ao longo do tempo (de minuto a minuto), logo o OR3 irá sempre ter um IP novo e uma localização diferente, daí ser impossível garantir que, numa determinada altura, a nossa localização seja nos EUA.
+Visto que há várias ligações numa conexão TOR, devidos aos vários OR’s, e estas são alteradas ao longo do tempo (de minuto a minuto), o OR3 irá sempre ter um IP novo e uma localização diferente, daí ser impossível garantir que, numa determinada altura, a nossa localização seja nos EUA.
 
-#### P1.2:
+#### P1.2
 
 #### 1)
 
@@ -25,4 +26,6 @@ Clicando no lado esquerdo da barra de URL, verificamos qual é o circuito para e
 
 #### 2)
 
-Ao contrario da maioria, ambos os sites fornecidos apresentam-se como serviços anonimos, o que leva o protocolo a criar os 3 "*relay*s" extras que vimos anteriormente. Ao contrario dos três primeiros *Onion Routers* onde o utilizador tem acesso e pode alterar estes, estes três "*relay*s" aparecem assim porque, correspondem ao circuito TOR que foi estabelecido entre o servidor *web* e o *rendezvous point* . Assim, o unico ponto de comunicação com este serviço é pelo *rendezvous point*.
+Ao contrário da maioria, ambos os sites fornecidos apresentam-se como serviços anónimos, o que leva o protocolo a criar os 3 "*relay*s" da pergunta anterior. 
+Ao contrário dos três primeiros, *Onion Routers*, onde o utilizador tem acesso e pode alterar estes, estes três "*relay*s" aparecem assim porque não foram escolhidos pelo utilizador, e correspondem ao circuito TOR que foi estabelecido entre o servidor *web* e o *rendezvous point*, e como tal não possuímos informação sobre os mesmos. 
+Assim, o único ponto de comunicação com este serviço é pelo *rendezvous point*.
