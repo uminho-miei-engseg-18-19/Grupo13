@@ -30,4 +30,4 @@ Ao contrário da maioria, ambos os sites fornecidos apresentam-se como serviços
 
 Ao contrário dos três primeiros, *Onion Routers*, onde o utilizador tem acesso e pode alterar estes, estes três "*relay*s" aparecem assim porque não foram escolhidos pelo utilizador, e correspondem ao circuito TOR que foi estabelecido entre o servidor *web* e o *rendezvous point*, e como tal não possuímos informação sobre os mesmos. 
 
-Assim, o único ponto de comunicação com este serviço é pelo *rendezvous point*, comunicação essa constituída por 6 "saltos", dois circuitos TOR, desde o utilizador até ao *rendezvous point" e do *rendezvous point* ao servidor *web*.
+Assim, o único ponto de comunicação com este serviço é pelo *rendezvous point*, comunicação essa constituída por 6 "saltos", dois circuitos TOR, desde o utilizador até ao *rendezvous point* e do *rendezvous point* ao servidor *web*.
