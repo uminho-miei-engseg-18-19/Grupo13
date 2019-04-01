@@ -1,0 +1,11 @@
+difficulty: 6
+Mining block 1...
+Block mined: 000000d5f62381a9961ba1c832979d36d0157622a258e525deb10f7be42339b5
+Mining block 2...
+Block mined: 0000001af79e13be9fe363e1ade73c5a9c4594303d56b6f17049b132ce843ad7
+Mining block 3...
+
+
+real	6m3.695s
+user	5m56.296s
+sys	0m3.092s

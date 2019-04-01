@@ -1,0 +1,12 @@
+difficulty: 3
+Mining block 1...
+Block mined: 0007c25169f5256ebb80fcbb423b582a8e699a759e41abb28906295973f9de4c
+Mining block 2...
+Block mined: 0004af57b70136e9f4b5309f92d518b3f297168d4cf47d4f9354808daadce457
+Mining block 3...
+Block mined: 00075796ab77bb5289bb9a952b91047482b3348d54d915ff5e5bce28256d01fe
+Is Blockchain valid? true
+
+real	0m0.436s
+user	0m0.408s
+sys	0m0.012s

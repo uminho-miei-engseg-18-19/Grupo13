@@ -1,0 +1,12 @@
+difficulty: 5
+Mining block 1...
+Block mined: 0000023168f87d968813b22c4dc92f60c127ff5084af8487d913d497ea7a7900
+Mining block 2...
+Block mined: 000000b950a180294edddf4340a2d5834119a41bf89e4b2027f341f0fc02365e
+Mining block 3...
+Block mined: 0000088dc9c3115ee6ab7e95d2e8836f932d75d303ab451a825241acde589a58
+Is Blockchain valid? true
+
+real	0m27.059s
+user	0m26.168s
+sys	0m0.304s
