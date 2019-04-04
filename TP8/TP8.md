@@ -5,6 +5,7 @@
 #### 1.
 
 Tendo por base a métrica que indica que por cada 1000 linhas de código temos entre 5 a 50 bugs, obtemos então:
+
 |  							| Linhas de código 	|	Número de bugs(estimativa)	|
 |:-------:|:-----:|:-----:|
 |Facebook       			|  62 milhões   	|	310.000 a 3.100.000			|
