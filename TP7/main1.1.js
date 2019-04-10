@@ -67,7 +67,9 @@ let koreCoin = new Blockchain();
 
 koreCoin.addBlock(new Block (1, "01/01/2018", {amount: 20}));
 koreCoin.addBlock(new Block (2, "02/01/2018", {amount: 40}));
-koreCoin.addBlock(new Block (3, "02/01/2018", {amount: 40}));
+koreCoin.addBlock(new Block (3, "02/01/2018", {amount: 60}));
+koreCoin.addBlock(new Block (4, "01/04/2019", {Bloco1: ['transferencia1',40],Bloco2: ['transferencia2',20]}));
+koreCoin.addBlock(new Block (4, "01/04/2019", {Bloco4: ['transferencia1',60]}));
 
 console.log('Is Blockchain valid? ' + koreCoin.isChainValid());
 
