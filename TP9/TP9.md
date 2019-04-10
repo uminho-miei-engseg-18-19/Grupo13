@@ -1,0 +1,25 @@
+### 1. Risco
+
+#### P1.1
+
+
+### 2. Secure Software Development Lifecycle (S-SDLC)
+
+#### P2.1
+
+
+#### P2.2
+
+
+#### P2.3
+
+
+### 3. SAMM (Software Assurance Maturity Model)
+
+#### P3.1
+
+
+#### P3.2
+
+
+#### P3.3
