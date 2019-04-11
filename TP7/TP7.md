@@ -38,11 +38,11 @@ Para criar blocos e simular transações em cada um deles basta acrescentar o c�
 #### P2.1
 O tempo de cada um pode ser visto nos ficheiros na [pasta](Exercicio\ 2\ Docs/)  Exercicio 2 Docs mas, em suma, os resultados que vêmos são, em segundos, para cada dificuldade testada:
 
- 2 - 0m0.115s
- 3 - 0m0.436s
- 4 - 0m2.143s
- 5 - 0m27.059s
- 6 - 6m3.695s
+ 2. 0m0.115s
+ 3. 0m0.436s
+ 4. 0m2.143s
+ 5. 0m27.059s
+ 6. 6m3.695s
  
 Ora, como vemos, cada nível de dificuldade de minerar aumenta o tempo que demora a minerar os blocos.
 
