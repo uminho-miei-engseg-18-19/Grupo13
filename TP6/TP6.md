@@ -1,7 +1,18 @@
+
 ### 1. RGPD (Regulamento Geral de Proteção de Dados)
 
 #### P1.1
+Nos decidimos escolher a pergunta que estuda o RGPD, pois achamos que um conhecimento aprofundado deste regulamento será bastante benéfico, visto que, por enquanto, temos pouco conhecimento sobre o mesmo.
 
+Como somos o grupo 13, calhou-nos falar sobre o artigo 5º. Este artigo fala sobre os "princípios relativos ao tratamento de dados pessoais".
+
+Os dados pessoais são objetos que devem ter um tratamento lícito, leal e transparente em relação ao titular dos dados, ou seja, estes dados podem ser tratados desde que cumpram as leis que estão impostas a estes e desde que todo o seu tratamento seja do conhecimento do titular dos dados.
+
+Os dados só podem ser guardados para fins determinados, explícitos ou legítimos, não podendo ser tratados posteriormente. Isto pode acontecer apenas para fins de arquivo de interesse público, para fins de investigação científica ou histórica, ou para fins estatísticos. Logo, deve ser pensado, de antemão, qual a finalidade que estes dados vão servir, pois não devem ser armazenados mais dados do que aqueles necessários para o cumprimento da sua finalidade. Isto também implica que os dados sejam versáteis, ou seja, que haja uma atualização, retificação ou remoção dos dados caso necessário, ou caso seja pedido pelo titular dos dados.
+
+Os dados guardados não podem ser sempre associados ao titular, ou seja, apenas durante o tempo que estes são usados para um determinado fim, estes podem e devem estar associados a uma certa entidade, mas mal esse fim seja atingido, a entidade em questão não puderá mais ser associada a estes dados. Quando isto acontece, os dados podem ser eliminados ou guardados caso sejam usados, futuramente, para fins de investigação científica, para fins históricos ou para fins estatísticos.
+
+Por fim, as entidades responsáveis por armazenar estes dados devem ter alguns cuidados a tomar neste processo. Pois, é necessário proteção para que estes não sejam tratados para fins não autorizados e para que estes não se percam. Com isto é necessário adotar estratégias que asseguram a integridade e confidencialidade dos dados em questão.
 
 #### P1.2
 
@@ -32,15 +43,10 @@ Dos critérios apresentados anteriormente, este projeto apresenta a necessidade 
  - 3. Monitorização automatica;
  - 4. Informação sensivel ou de natureza pessoal;
  - Possivel 5. Processamento de informação em grande escala.
- - 
 
 #### 3.
 Como vimos, este projeto requer a criação de um DPIA, este que completamos e apresentamos como [DPIA](DPIAMBWay.pdf), que preenvhemos imaginando como seria uma possivel implementação de algo semelhante.
 
 #### P1.4
 
-#### 1.
-
-#### 2.
-
-#### 3.
+O PIA está preencido e com o nome [PIA.pdf](PIA.pdf)
