@@ -18,7 +18,7 @@ Por fim, as entidades responsáveis por armazenar estes dados devem ter alguns c
 
 O documento *Privacy and Data Protection by Design – from policy to engineering* secção 3.2, apresenta 8 estratégias de privacy design, sendo que estas podem ser divididas em duas secções: estratégias orientadas aos dados e estratégias orientados aos processos.
 
-Estratégias orientadas aos dados
+**Estratégias orientadas aos dados**
 
 1. MINIMISE
 
@@ -39,7 +39,7 @@ Isto permite que os dados relativos a um utilizador estejam espalhados, o que em
 
 Finalmente a última estratégia orientada aos dados define que os dados pessoais devem ser tratados no maior nível de agregação possível, isto é, com o menor detalhe sobre cada indivíduo, como por exemplo juntar a informação sobre um atributo dos vários indivíduos, o que permite não revelar a conexão entre os mesmos.
 
-Estratégias orientadas aos processos
+**Estratégias orientadas aos processos**
 
 5. INFORM
 
