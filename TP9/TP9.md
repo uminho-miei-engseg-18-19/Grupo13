@@ -1,3 +1,4 @@
+
 ### 1. Risco
 
 #### P1.1
@@ -24,9 +25,17 @@ Ao consultar a secção 2.3(_Key Roles and Responsabilities in the SDLC_) vemos 
 ### 3. SAMM (Software Assurance Maturity Model)
 
 #### P3.1
+Como pedido, escolhemos 3 práticas de segurança que utilizamos no desenvolvimento do projeto da UC de Engenharia de Segurança:
 
+ - ![Education & Guidance](Imagens/Cap.png)
+ - ![Threat Assessment](Imagens/Capturar.png)
+ - ![Security Testing](Imagens/Capturar2.png)
 
+Como vemos nas imagens, obtemos um valor bastante positívo no valor da maturidade das três práticas.
 #### P3.2
-
+Apesar dos bons resultados, a maturidade das 3 práticas pode ser aumentada, sendo por isso o objetivo aumentar os dois primeiros para um valor superior a 2,5 e, se posssivel, aumentar a maturidade da **Education & Guidance**, que é grande parte do projeto, para um valor perto de 3 ou mesmo 3.
 
 #### P3.3
+Graças ao SAMM facilmente estabelecemos um plano para quatro fazes, de modo a aumentar a maturidade das práticas discutidas anteriormente:
+
+
