@@ -27,9 +27,9 @@ Ao consultar a secção 2.3(_Key Roles and Responsabilities in the SDLC_) vemos 
 #### P3.1
 Como pedido, escolhemos 3 práticas de segurança que utilizamos no desenvolvimento do projeto da UC de Engenharia de Segurança:
 
- - ![Education & Guidance](Imagens/Cap.png)
- - ![Threat Assessment](Imagens/Capturar.png)
- - ![Security Testing](Imagens/Capturar2.png)
+ - ![Education & Guidance](Imagens/Cap.PNG)
+ - ![Threat Assessment](Imagens/Capturar.PNG)
+ - ![Security Testing](Imagens/Capturar2.PNG)
 
 Como vemos nas imagens, obtemos um valor bastante positívo no valor da maturidade das três práticas.
 #### P3.2
@@ -38,9 +38,9 @@ Apesar dos bons resultados, a maturidade das 3 práticas pode ser aumentada, sen
 #### P3.3
 Graças ao SAMM facilmente estabelecemos um plano para quatro fazes, de modo a aumentar a maturidade das práticas discutidas anteriormente:
 
-- ![Education & Guidance](Imagens/EG1.png)
-- ![Education & Guidance](Imagens/EG2.png)
- - ![Threat Assessment](Imagens/TA1.png)
- - ![Threat Assessment](Imagens/TA2.png)
- - ![Security Testing](Imagens/ST1.png)
- - ![Security Testing](Imagens/ST2.png)
+- [Education & Guidance](Imagens/EG1.PNG)
+- [Education & Guidance](Imagens/EG2.PNG)
+ - [Threat Assessment](Imagens/TA1.PNG)
+ - [Threat Assessment](Imagens/TA2.PNG)
+ - [Security Testing](Imagens/ST1.PNG)
+ - [Security Testing](Imagens/ST2.PNG)
