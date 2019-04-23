@@ -38,9 +38,9 @@ Apesar dos bons resultados, a maturidade das 3 práticas pode ser aumentada, sen
 #### P3.3
 Graças ao SAMM facilmente estabelecemos um plano para quatro fazes, de modo a aumentar a maturidade das práticas discutidas anteriormente:
 
-- [Education & Guidance](Imagens/EG1.PNG)
-- [Education & Guidance](Imagens/EG2.PNG)
- - [Threat Assessment](Imagens/TA1.PNG)
- - [Threat Assessment](Imagens/TA2.PNG)
- - [Security Testing](Imagens/ST1.PNG)
- - [Security Testing](Imagens/ST2.PNG)
+- ![Education & Guidance](Imagens/EG1.PNG)
+- ![Education & Guidance](Imagens/EG2.PNG)
+ - ![Threat Assessment](Imagens/TA1.PNG)
+ - ![Threat Assessment](Imagens/TA2.PNG)
+ - ![Security Testing](Imagens/ST1.PNG)
+ - ![Security Testing](Imagens/ST2.PNG)
